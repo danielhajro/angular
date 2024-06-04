@@ -1,0 +1,22 @@
+<app-navbar-employer></app-navbar-employer>
+<div class="dashboard-container">
+    <h2>Employer Dashboard</h2>
+    <div *ngIf="employer">
+      <h3>Welcome, {{ employer.companyName }}</h3>
+      <p>Email: {{ employer.email }}</p>
+    </div>
+  
+    <div class="posts-section">
+      <h3>Your Job Posts</h3>
+      <a routerLink="/new-post" style="text-decoration: none;"><button>Create New Post</button></a> 
+      <div *ngFor="let post of jobPosts" class="job-post">
+        <h4>{{ post.title }}</h4>
+        <p>{{ post.description }}</p>
+        <p>Location: {{ post.location }}</p>
+        <p>Salary: {{ post.salary }}</p>
+        <button (click)="editPost(post.id)">Edit</button>
+        <button (click)="deletePost(post.id)">Delete</button>
+      </div>           
+    </div>
+  </div>
+  <app-footer></app-footer>

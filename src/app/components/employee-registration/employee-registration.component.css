@@ -1,0 +1,55 @@
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background-color: #fff;
+}
+
+form:hover {
+  border: 1px solid rgb(53, 53, 53);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+  width: 98%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  transition:0.3s ease;
+}
+
+button:hover {
+  background-color: #e74c3c;
+}
+
+/* Additional styling for input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: #fff;
+  border-color: #000000;
+}

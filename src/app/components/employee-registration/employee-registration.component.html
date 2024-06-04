@@ -1,0 +1,8 @@
+<h2>Register as Employee</h2>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Your Name">
+    <input type="email" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <button type="submit">Register</button>
+    <a routerLink="/employee-login">Already Register? Log In</a>
+  </form>

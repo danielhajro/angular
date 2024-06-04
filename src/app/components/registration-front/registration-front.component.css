@@ -1,0 +1,24 @@
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pic-add {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.62)), url("src/assets/photo/reg-pic.jpg");
+    background-size: 110%; /* Increase the background size */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.pic-add h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}

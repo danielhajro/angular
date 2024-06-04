@@ -1,0 +1,19 @@
+<app-navbar-employer></app-navbar-employer>
+<br>
+<div *ngIf="jobApplies.length === 0" class="empty-state">
+  No applications found.
+</div>
+
+<div *ngIf="jobApplies.length > 0" class="grid-container">
+  <div *ngFor="let apply of jobApplies" class="application-card">
+    <h3>{{ apply.jobTitle }}</h3>
+    <p><strong>Applicant Name:</strong> {{ apply.employeeName }}</p>
+    <p><strong>Email:</strong> {{ apply.employeeEmail }}</p>
+    <p><strong>Phone:</strong> {{ apply.phone }}</p>
+    <p><strong>Company:</strong> {{ apply.companyName }}</p>
+    <p><strong>Application Date:</strong> {{ apply.applicationDate.toDate() | date }}</p>
+    <a [href]="apply.cvUrl" target="_blank">View CV</a>
+  </div>
+</div>
+<br>
+<app-footer></app-footer>

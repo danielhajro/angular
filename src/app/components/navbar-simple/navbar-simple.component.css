@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #252d54;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-links a,
+.auth-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.auth-links a:hover {
+    color: #ffd700;
+}
+
+.nav-links,
+.auth-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a,
+.auth-links a {
+    margin: 0 10px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.logo img {
+    vertical-align: middle;
+}

@@ -1,0 +1,12 @@
+<app-navbar-employer></app-navbar-employer>
+<div class="edit-post-container">
+    <h2>Edit Job Post</h2>
+    <form [formGroup]="editPostForm" (ngSubmit)="onSubmit()">
+      <input type="text" formControlName="title" placeholder="Job Title">
+      <textarea formControlName="description" placeholder="Job Description"></textarea>
+      <input type="text" formControlName="location" placeholder="Location">
+      <input type="text" formControlName="salary" placeholder="Salary">
+      <button type="submit">Update Post</button>
+    </form>
+  </div>
+<app-footer></app-footer>

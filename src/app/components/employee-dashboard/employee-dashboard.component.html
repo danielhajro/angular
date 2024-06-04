@@ -1,0 +1,30 @@
+<app-navbar-employee></app-navbar-employee>
+<div class="page-container">
+  <div class="dashboard-container">
+    <div class="header">
+      <div class="user-info">
+        <span>{{ employee?.name }}</span>
+        <span>{{ employee?.email }}</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="filter-section">
+        <input type="text" placeholder="Search for jobs" [(ngModel)]="filter" (input)="onFilterChange($event)">
+      </div>
+      <div class="job-posts-section">
+        <div *ngFor="let post of filteredJobPosts" class="job-post">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+          <p>Location: {{ post.location }}</p>
+          <p>Salary: {{ post.salary }}</p>
+          <p><strong>Company:</strong> {{ post.companyName }}</p>
+          <button (click)="applyForJob(post.id)">Apply</button>
+          <button class="heart" (click)="addToWishlist(post)">
+            <i class="fa fa-heart"></i> Add to Wishlist
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

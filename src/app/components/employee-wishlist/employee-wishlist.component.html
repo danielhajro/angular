@@ -1,0 +1,19 @@
+<app-navbar-employee></app-navbar-employee>
+<div class="dashboard-container">
+  <div class="header">
+  </div>
+  <div class="content">
+    <div class="job-posts-section">
+      <div *ngIf="wishlistJobs.length === 0">No jobs in wishlist</div>
+      <div *ngFor="let job of wishlistJobs" class="job-post">
+        <h3>{{ job.title }}</h3>
+        <p>{{ job.description }}</p>
+        <p>Location: {{ job.location }}</p>
+        <p>Salary: {{ job.salary }}</p>
+        <p><strong>Company:</strong> {{ job.companyName }}</p>
+        <button class="heart" (click)="removeFromWishlist(job)">Remove from Wishlist</button>
+        <p *ngIf="!job.id" class="error">Job ID is missing, cannot remove</p>
+      </div>
+    </div>
+  </div>
+<app-footer></app-footer>
